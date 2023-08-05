@@ -1,0 +1,22 @@
+type Query{
+    Students:[Student]
+    student(id:Int!):Student
+
+}
+type Mutation{
+    CreateStudent(input:StudentInput):Boolean
+    UpdateStudent(id:Int!,input:StudentInput):Boolean
+    RemoveStudent(id:Int!):Boolean
+}
+type Student{
+    id:Int
+    gender:String
+    student_name:String
+    subject_id:Int
+}
+input StudentInput{
+    id:Int
+    gender:String
+    student_name:String
+    subject_id:Int
+}
