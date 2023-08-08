@@ -1,0 +1,12 @@
+type Query{
+    products:[Product]
+    product(id:Int!):Product
+}
+type Product{
+    id:Int
+    product_name:String
+    summary:String
+    description:String
+    image:String
+    category:ProductCategory
+}

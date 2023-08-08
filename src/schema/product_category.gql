@@ -1,0 +1,8 @@
+type Query{
+    productCategories:[ProductCategory]
+    productCategory(id:Int!):ProductCategory
+}
+type ProductCategory{
+    id:Int
+    category_name:String
+}

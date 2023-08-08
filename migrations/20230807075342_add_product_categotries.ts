@@ -6,7 +6,7 @@ export async function up(knex: Knex): Promise<void> {
     return await knex.schema.createTable("product_categories",(field)=>{
         field.increments();
         field.string("category_name");       
-        field.timestamps();
+        field.timestamps(true,true);
 
     })
 }

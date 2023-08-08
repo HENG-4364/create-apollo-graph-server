@@ -1,3 +1,7 @@
+import { GetAllProductcategories } from "./ProductCategories/Query/GetAllProductCategories";
+import { GetProductCategoryDetail } from "./ProductCategories/Query/GetProductCategoryDetail";
+import { GetAllProducts } from "./Products/Query/GetAllProducts";
+import { GetProductDetail } from "./Products/Query/GetProductDetail";
 import { CreateStudent } from "./Students/Mutation/CreateStudent";
 import { RemoveStudent } from "./Students/Mutation/RemoveStudent";
 import { UpdateStudent } from "./Students/Mutation/UpdateStudent";
@@ -16,6 +20,10 @@ export const Resolvers = {
         Subjects: GetAllSubjects,
         subject: GetSubjectDetail,
         student: GetStudentDetail,
+        products: GetAllProducts,
+        product: GetProductDetail,
+        productCategories: GetAllProductcategories,
+        productCategory: GetProductCategoryDetail,
     },
     Mutation: {
 
