@@ -1,23 +1,22 @@
-type Query{
-    products:[Product]
-    product(id:Int!):Product
-    
+type Query {
+  products: [Product]
+  product(id: Int!): Product
 }
-type Mutation{
-    createProduct(input:ProductInput):Boolean
+type Mutation {
+  createProduct(input: ProductInput): Boolean
 }
-type Product{
-    id:Int
-    product_name:String
-    summary:String
-    description:String
-    image:String
-    category:ProductCategory
+type Product {
+  id: Int
+  product_name: String
+  summary: String
+  description: String
+  image: String
+  category: ProductCategory
 }
-input ProductInput{
-    product_name:String
-    summary:String
-    description:String
-    image:String
-    category_id:Int
+input ProductInput {
+  product_name: String
+  summary: String
+  description: String
+  image: String
+  category_id: Int
 }
