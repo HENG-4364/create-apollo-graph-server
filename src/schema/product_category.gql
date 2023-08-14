@@ -1,8 +1,18 @@
-type Query{
-    productCategories:[ProductCategory]
-    productCategory(id:Int!):ProductCategory
+type Query {
+  productCategories: [ProductCategory]
+  productCategory(id: Int!): ProductCategory
 }
-type ProductCategory{
-    id:Int
-    category_name:String
+type Mutation {
+  createProductCategory(input:ProductCategoryInput): Boolean
+  updateProductCategory(id:Int!,input:ProductCategoryInput):Boolean
+  removeProductCategory(id:Int!):Boolean
+}
+input ProductCategoryInput{
+  id:Int
+  category_name:String
+}
+type ProductCategory {
+  id: Int
+  category_name: String
+  products: [Product]
 }

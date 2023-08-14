@@ -4,6 +4,9 @@ type Query {
 }
 type Mutation {
   createProduct(input: ProductInput): Boolean
+  updateProduct(id:Int!,input:ProductInput):Boolean
+  removeProduct(id:Int!):Boolean
+
 }
 type Product {
   id: Int

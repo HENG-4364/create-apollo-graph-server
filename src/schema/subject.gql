@@ -1,18 +1,17 @@
-type Query{
-    Subjects:[Subject]
-    subject(id:Int!):Subject
+type Query {
+  Subjects: [Subject]
+  subject(id: Int!): Subject
 }
-type Mutation{
-    CreateSubject(input:SubjectInput):Boolean
-    UpdateSubject(id:Int!,input:SubjectInput):Boolean
-    RemoveSubject(id:Int!):Boolean
+type Mutation {
+  CreateSubject(input: SubjectInput): Boolean
+  UpdateSubject(id: Int!, input: SubjectInput): Boolean
+  RemoveSubject(id: Int!): Boolean
 }
-type Subject{
-    id:Int
-    subject_name:String
-
+type Subject {
+  id: Int
+  subject_name: String
 }
-input SubjectInput{
-    id:Int
-    subject_name:String
+input SubjectInput {
+  id: Int
+  subject_name: String
 }

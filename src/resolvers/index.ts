@@ -1,6 +1,11 @@
+import { CreateProductCategory } from './ProductCategories/Mutation/createProductCategory';
+import { RemoveProductCategory } from './ProductCategories/Mutation/removeProductCategory';
+import { UpdateProductCategory } from './ProductCategories/Mutation/updateProductCategory';
 import { GetAllProductcategories } from './ProductCategories/Query/GetAllProductCategories';
 import { GetProductCategoryDetail } from './ProductCategories/Query/GetProductCategoryDetail';
 import { CreateProduct } from './Products/Mutation/CreateProduct';
+import { RemoveProduct } from './Products/Mutation/RemoveProduct';
+import { UpdateProduct } from './Products/Mutation/UpdateProduct';
 import { GetAllProducts } from './Products/Query/GetAllProducts';
 import { GetProductDetail } from './Products/Query/GetProductDetail';
 import { CreateStudent } from './Students/Mutation/CreateStudent';
@@ -33,5 +38,10 @@ export const Resolvers = {
     UpdateStudent: UpdateStudent,
     RemoveStudent: RemoveStudent,
     createProduct: CreateProduct,
+    updateProduct: UpdateProduct,
+    removeProduct: RemoveProduct,
+    createProductCategory: CreateProductCategory,
+    updateProductCategory: UpdateProductCategory,
+    removeProductCategory: RemoveProductCategory,
   },
 };
