@@ -14,6 +14,7 @@ type Product {
   summary: String
   description: String
   image: String
+  price:Int
   category: ProductCategory
 }
 input ProductInput {
@@ -21,5 +22,6 @@ input ProductInput {
   summary: String
   description: String
   image: String
+  price:Int
   category_id: Int
 }

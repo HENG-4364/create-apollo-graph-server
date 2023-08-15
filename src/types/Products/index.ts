@@ -3,5 +3,6 @@ export type ProductInput = {
   summary: string;
   description: string;
   image: string;
+  price:number;
   category_id: number;
 };
