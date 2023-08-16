@@ -1,5 +1,5 @@
 type Query {
-  products: [Product]
+  products(category_id:Int): [Product]
   product(id: Int!): Product
 }
 type Mutation {
