@@ -18,6 +18,8 @@ import { RemoveSubject } from './Subjects/Mutation/RemoveSubject';
 import { UpdateSubject } from './Subjects/Mutation/updateSubject';
 import { GetAllSubjects } from './Subjects/Query/GetAllSubjects';
 import { GetSubjectDetail } from './Subjects/Query/GetSubjectDetail';
+import { CreateUserMutation } from './Users/CreateUserMutation';
+import { UserLoginMutation } from './Users/UserLoginMutation';
 
 export const Resolvers = {
   Query: {
@@ -43,5 +45,7 @@ export const Resolvers = {
     createProductCategory: CreateProductCategory,
     updateProductCategory: UpdateProductCategory,
     removeProductCategory: RemoveProductCategory,
+    createUser: CreateUserMutation,
+    userLogin: UserLoginMutation,
   },
 };
