@@ -1,4 +1,4 @@
 type Mutation {
-  userLogin(username: String!, password: String!): Boolean
+  userLogin(username: String!, password: String!): String!
   createUser(username: String!, password: String!): Boolean
 }
