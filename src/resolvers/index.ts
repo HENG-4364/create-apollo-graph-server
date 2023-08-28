@@ -19,6 +19,7 @@ import { UpdateSubject } from './Subjects/Mutation/updateSubject';
 import { GetAllSubjects } from './Subjects/Query/GetAllSubjects';
 import { GetSubjectDetail } from './Subjects/Query/GetSubjectDetail';
 import { CreateUserMutation } from './Users/CreateUserMutation';
+import { GetAllUsers } from './Users/Query/GetAllUsers';
 import { UserLoginMutation } from './Users/UserLoginMutation';
 
 export const Resolvers = {
@@ -31,6 +32,7 @@ export const Resolvers = {
     product: GetProductDetail,
     productCategories: GetAllProductcategories,
     productCategory: GetProductCategoryDetail,
+    users:GetAllUsers,
   },
   Mutation: {
     CreateSubject: CreateSubject,

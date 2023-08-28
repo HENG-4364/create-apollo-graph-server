@@ -1,7 +1,7 @@
 import { knx } from 'src/connections/CreateKnexConnectios';
 import bcrypt from 'bcrypt';
 import { GraphQLError } from 'graphql';
-import jwt from "jsonwebtoken"
+import jwt from 'jsonwebtoken';
 
 export const UserLoginMutation = async (
   _,
@@ -17,9 +17,9 @@ export const UserLoginMutation = async (
   const verified = bcrypt.compareSync(password, user.password);
 
   if (verified) {
-    const token=jwt.sign(user,"123")
+    const token = jwt.sign({ id: user.id, username: user.username }, '123');
     return token;
   } else {
-    throw new GraphQLError(`Username or password is incorrect`);;
+    throw new GraphQLError(`Username or password is incorrect`);
   }
 };
