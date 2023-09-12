@@ -9,11 +9,10 @@ type User {
   fullaname: String
 }
 type Mutation {
-  userLogin(username: String!, password: String!): String!
+  userLogin(email: String!, password: String!): String!
   createUser(input: UserInput): Boolean
 }
 input UserInput {
-  id: Int
   email: String
   username: String
   password:String

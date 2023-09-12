@@ -8,7 +8,6 @@ type Mutation {
   removeProductCategory(id:Int!):Boolean
 }
 input ProductCategoryInput{
-  id:Int
   category_name:String
 }
 type ProductCategory {

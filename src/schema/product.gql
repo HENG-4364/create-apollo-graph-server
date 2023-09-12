@@ -1,12 +1,15 @@
 type Query {
-  products(category_id:Int): [Product]
+  products(category_id: Int, paginationInput: PaginationInput): ProductList
   product(id: Int!): Product
 }
 type Mutation {
   createProduct(input: ProductInput): Boolean
-  updateProduct(id:Int!,input:ProductInput):Boolean
-  removeProduct(id:Int!):Boolean
-
+  updateProduct(id: Int!, input: ProductInput): Boolean
+  removeProduct(id: Int!): Boolean
+}
+type ProductList {
+  data: [Product]
+  pagination: Pagination
 }
 type Product {
   id: Int
@@ -14,7 +17,7 @@ type Product {
   summary: String
   description: String
   image: String
-  price:Int
+  price: Int
   category: ProductCategory
 }
 input ProductInput {
@@ -22,6 +25,16 @@ input ProductInput {
   summary: String
   description: String
   image: String
-  price:Int
+  price: Int
   category_id: Int
+}
+input PaginationInput {
+  page: Int
+  size: Int
+}
+
+type Pagination {
+  total: Int
+  size: Int
+  current: Int
 }
