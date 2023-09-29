@@ -19,7 +19,7 @@ export const GetAllProducts = async (
   }
   const GetAllProducts = await GetAllProductsQuery;
   const getAllProductcategories = await knx("product_categories");
-
+  const getAllProducts = await knx("products");
   return {
     data: GetAllProducts.map(async (item) => {
       const Productcategory = getAllProductcategories.find(
@@ -32,7 +32,7 @@ export const GetAllProducts = async (
     }),
     pagination: {
       size: paginationInput?.size,
-      total: GetAllProducts?.length || 0,
+      total: getAllProducts?.length,
       current: paginationInput?.page || 1,
     },
   };
