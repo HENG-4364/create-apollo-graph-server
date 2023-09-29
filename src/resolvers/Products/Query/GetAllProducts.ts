@@ -5,17 +5,17 @@ export const GetAllProducts = async (
   {
     category_id,
     paginationInput,
-  }: { category_id: number; paginationInput: PaginationInput },
+  }: { category_id: number; paginationInput?: PaginationInput },
   {}
 ) => {
   const GetAllProductsQuery = knx("products");
   if (category_id) {
     GetAllProductsQuery.where({ category_id: category_id });
   }
-  const { size, page } = paginationInput;
-  if (size && page) {
-    const offset = (page - 1) * size;
-    GetAllProductsQuery.offset(offset).limit(size);
+
+  if (paginationInput?.size && paginationInput?.page) {
+    const offset = (paginationInput?.page - 1) * paginationInput?.size;
+    GetAllProductsQuery.offset(offset).limit(paginationInput?.size);
   }
   const GetAllProducts = await GetAllProductsQuery;
   const getAllProductcategories = await knx("product_categories");
